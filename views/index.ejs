@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Lösenordsgenerator</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Skapa ett säkert lösenord</h1>
+        <form method="POST" action="/generate">
+            <label>Längd:
+                <input type="number" name="length" value="12" min="4" max="64">
+            </label><br>
+            <label><input type="checkbox" name="uppercase" checked> Versaler</label><br>
+            <label><input type="checkbox" name="lowercase" checked> Gemener</label><br>
+            <label><input type="checkbox" name="numbers" checked> Siffror</label><br>
+            <label><input type="checkbox" name="symbols" checked> Symboler</label><br>
+            <button type="submit">Generera lösenord</button>
+        </form>
+
+        <% if (password) { %>
+            <div class="result">
+                <p>Ditt lösenord:</p>
+                <code><%= password %></code>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
