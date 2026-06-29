@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <title>Lösenordsgenerator</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 </head>
 <body>
     <div class="container">
+        <div class="logo-container">
+            <img src="/logo-pwgen-300x100.svg" alt="En rund logotyp med ett hänglås på." title="Logotyp">
+        </div>
         <h1>Skapa ett säkert lösenord</h1>
         <form method="POST" action="/generate">
             <label>Längd:
@@ -18,7 +22,6 @@
             <label><input type="checkbox" name="symbols" checked> Symboler</label><br>
             <button type="submit">Generera lösenord</button>
         </form>
-
         <% if (password) { %>
             <div class="result">
                 <p>Ditt lösenord:</p>
